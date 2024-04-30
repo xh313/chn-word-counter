@@ -103,7 +103,7 @@ export default class TextOutput extends Component {
             id="text-output"
             onClick={this.props.onClick}
         >
-            <div id="word-count"><h2>Word count (not character!): {pcount}</h2></div>
+            <div id="word-count"><h3>Word count (not character!): {pcount}</h3></div>
             {tokens.map(({token, prefix, suffix}) =>
                 token.matches.length > 0
                 ? <WordToken

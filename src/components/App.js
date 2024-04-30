@@ -8,6 +8,8 @@ import TypeChooser from './TypeChooser'
 import TextOutput from './TextOutput'
 import Dictionary from './Dictionary'
 
+import cedict from '../../data/cedict_ts.u8.txt'
+
 export default class App extends Component {
     constructor() {
         super()
@@ -18,7 +20,8 @@ export default class App extends Component {
     componentDidMount() {
         // Load dictionary
 
-        let request = new XMLHttpRequest()
+        var request = new XMLHttpRequest()
+        console.log(request)
 
         request.addEventListener('progress', evt => {
             let percent = evt.loaded / 9497637
@@ -30,7 +33,11 @@ export default class App extends Component {
             this.setState(state => appState.commitDictionary(state, responseText))
         })
 
-        request.open('GET', './data/cedict_ts.u8.txt')
+        request.open(
+            'GET', 
+            // '../../data/cedict_ts.u8.txt'
+            cedict
+        )
         request.send()
     }
 
