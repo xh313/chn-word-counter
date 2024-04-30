@@ -2,7 +2,7 @@ import {h, Component} from 'preact'
 import WordToken from './WordToken'
 
 const prefixPunctuation = ['‘', '“', '《', '『', '【', '（']
-const suffixPunctuation = ['’', '”', '》', '』', '】', '）', '、', '，', '…', '。', '：', '；', '！', '？']
+const suffixPunctuation = ['’', '”', '》', '』', '】', '）', '、', '，', '…', '。', '：', '；', '！', '？', ' ']
 
 let tokenEqual = (t1, t2) => t1 == null || t2 == null ? t1 == t2 : t1.text === t2.text
 

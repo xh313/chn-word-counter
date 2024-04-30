@@ -17,7 +17,7 @@ export default class TextInput extends Component {
                 autofocus
                 value={this.props.value}
                 onInput={this.handleInput}
-            />
+            >Input Chinese text here</textarea>
         </section>
     }
 }

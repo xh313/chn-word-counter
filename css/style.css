@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext');
 
 * {
-    margin: 0.1rem;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* background-color: #fff; */
@@ -9,15 +9,28 @@
    
 }
 
-main {
-    background-color: #fff;
-}
+/* html {
+    height:100%; margin:0; padding: 0;
+} */
 
-body, textarea {
+
+body {
     font: 100%/1.5 'Avenir', 'Open Sans', 'Microsoft Yahei', sans-serif;
     color: #333;
     background-color: #fff;
+    height:100%; 
+    margin:0; 
+    padding: 0;
     
+}
+
+main {
+    background-color: #fff;
+    height: 100svh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
 }
 
 a {
@@ -169,8 +182,8 @@ a {
 
 #text-output {
     padding: 1em;
-    max-height: 100%;
-    overflow-y: auto;
+    /* height: fit-content; */
+    overflow-y: scroll;
     overflow-x: hidden;
     font-size: 1.3em;
     line-height: 1.1;
@@ -306,6 +319,10 @@ a {
 
     #text-input {
         height: auto;
+    }
+
+    #text-input textarea {
+        resize: none;
     }
 
     #output {
